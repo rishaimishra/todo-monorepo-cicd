@@ -1,0 +1,18 @@
+FROM oven/bun:1
+WORKDIR /app
+
+COPY ./package.json 
+COPY ./bun.lock
+copy ./packages
+copy ./turbo.json
+copy ./apps/web
+
+RUN bun install 
+
+run bun run db:migrate
+
+RUN bun install
+
+expose 3000
+
+CMD ["bun", "run", "start:web"]
