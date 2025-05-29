@@ -23,6 +23,6 @@ jobs:
           context: .
           file: ./docker/dockerfile.backend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/backend:latest
+          tags: rishimishra/todo-backend:${{ github.sha }}
 
     
