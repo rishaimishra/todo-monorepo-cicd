@@ -12,5 +12,4 @@ RUN bun install
 RUN bun run db:migrate
 
 EXPOSE 8080
-
 CMD ["bun", "run", "start:backend"]
