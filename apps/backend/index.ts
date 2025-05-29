@@ -14,6 +14,9 @@ app.get("/users", (req, res) => {
       res.status(500).json({ error: err.message });
     });
 })
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from the backend!" });
+})
 
 app.post("/user", (req, res) => {
   const { username, password } = req.body;

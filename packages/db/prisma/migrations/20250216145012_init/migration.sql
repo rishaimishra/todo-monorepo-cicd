@@ -1,7 +1,6 @@
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
     "username" TEXT NOT NULL,
     "password" TEXT NOT NULL,
 
@@ -11,7 +10,7 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Todo" (
     "id" TEXT NOT NULL,
-    "todo" TEXT NOT NULL,
+    "task" TEXT NOT NULL,
     "done" BOOLEAN NOT NULL DEFAULT false,
     "userId" TEXT NOT NULL,
 
